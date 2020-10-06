@@ -1,0 +1,42 @@
+<idea-plugin>
+  <id>DisableDecompiledFilesReopening</id>
+  <name>Disable Decompiled Files Reopening</name>
+  <version>1.0</version>
+
+  <vendor url="https://github.com/krasa/DisableDecompiledFilesReopening" email="vojta.krasa@gmail.com">Vojtech
+      Krasa
+  </vendor>
+  
+  <description><![CDATA[
+    ]]></description>
+
+  <change-notes><![CDATA[
+    ]]>
+  </change-notes>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="201.0"/>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+    
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+  
+  <applicationListeners>
+    <listener class="krasa.disableDecompiledFilesReopening.BeforeProjectCloseListener"
+              topic="com.intellij.openapi.project.ProjectManagerListener"
+              activeInHeadlessMode="false" activeInTestMode="false"/>
+  </applicationListeners>
+
+  
+  
+</idea-plugin>
